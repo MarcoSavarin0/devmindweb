@@ -15,6 +15,7 @@
     align-items: center;
     background-color: black;
     padding-bottom: 5px;
+  
   }
   
   .logo {
@@ -28,26 +29,54 @@
     display: flex;
     flex-direction: column; 
     justify-content: center; 
+    
   }
   
   .navbar ul li {
     margin: 5px 15px; 
+    
   }
   .navbar ul{
     display: none;
   }
   .fa-bars{
     font-size: 30px;
-    background-color: #0f5ad1;
+    background-color: #000000;
     padding: 10px;
-    border-radius: 10%;
+    
   }
   
   .welcome-box{
     padding: 50px 10px;
   }
-  #about, .row ,.aboutCol1, .title , .about-p{
+  .title{
+    text-align: center;
+  }
+  .about-p{
+    text-align: center;
+    
+  }
+  .aboutCol2{
+    display: flex;
+    justify-content: center;
+  }
+  #about, .row ,.aboutCol1, .title , .about-p, .aboutCol2,.about-img{
     background-color: #063A8C;
+  }
+  .about-img, .title{
+    margin: 15px 0 ;
+  }
+  #about{
+    padding-bottom: 10px;
+  }
+  .subTitle2{
+    text-align: center;
+  }
+  .developers{
+    margin-bottom: 10px;
+  }
+  .card-client{
+    margin-bottom: 20px;
   }
   /* tablet */
   @media (min-width:560px) {
@@ -64,8 +93,9 @@
     .navbar ul{
       display: flex;
       flex-direction: row; 
-      
+      background-color: #05337e00;
     }
+   
   }
   /* computadoras */
   @media (min-width:768px) {
@@ -79,8 +109,18 @@
       flex-direction: row;
       align-items: center; 
       justify-content: space-between; 
-     
+      position: fixed; /* Cambia a 'fixed' */
+      top: 0; /* Asegura que el header esté en la parte superior de la página */
+      width: 100%; /* Asegura que el header ocupe todo el ancho */
+      z-index: 100;
     }
+    .navbar {
+      background-color: transparent;
+      transition: background-color 0.5s ease; 
+    }
+    .navbar.black-bg {
+  background-color: black; /* Cambia el color a negro */
+}
     .navbar ul {
       flex-direction: row; 
       padding-left: 0; 
@@ -88,7 +128,7 @@
     }
     .navbar ul li {
       padding: 0 15px; 
-      
+      background-color: transparent;
     }
     .welcome-box {
       margin-top: 300px;
@@ -131,9 +171,12 @@
       font-size: 60px;
       font-weight: 600;
       color: #fff;
+      text-align: justify;
     }
     .about-p {
       padding-right: 130px;
+      text-align: justify;
+      margin-left: 14px;
     }
     
     .aboutCol2 {
@@ -148,17 +191,17 @@
 
 .developers {
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: space-around;
 
   .card-client {
-    background: #555;
-    width: 13rem;
+    background: #0b2c60;
+    width: 20rem;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 20px;
     padding-right: 20px;
-    border: 4px solid #fff;
+    border: 4px solid #a6a6a6;
     box-shadow: 0 6px 10px #212121;
     border-radius: 10px;
     text-align: center;
@@ -172,9 +215,7 @@
   }
   
   .user-picture {
-    background-color: #555;
-    overflow: hidden;
-    object-fit: cover;
+    background-color: #0b2c60;
     width: 5rem;
     height: 5rem;
     border: 4px solid #fff;
@@ -183,16 +224,22 @@
     justify-content: center;
     align-items: center;
     margin: auto;
+    position: relative; 
   }
   
-  .user-picture svg {
-    background-color: #555;
-    width: 2.5rem;
-    fill: currentColor;
+  /* Estilo de la imagen */
+  .user-picture img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 999px;
   }
-  
   .name-client {
-    background-color: #555;
+    background-color: #0b2c60;
     margin: 0;
     margin-top: 20px;
     font-weight: 600;
@@ -200,18 +247,19 @@
   }
   
   .name-client span {
-    background-color: #555;
+    background-color: #0b2c60;
     display: block;
     font-weight: 200;
     font-size: 16px;
   }
 
   .social-media {
-    background-color: #555;
+    background-color: #0b2c60;
   }
 
-  .social-media svg{
-    background-color: #555;
+  .social-media i{
+    background-color: #0b2c60;
+    font-size: 23px;
   }
   
   .social-media:before {
