@@ -71,5 +71,46 @@
     }
     .navbar ul li {
       padding: 0 15px; 
+      
     }
+    .welcome-box {
+      margin-top: 300px;
+      padding-left: 30px;
+    }
+    .welcome-h1 {
+      font-size: 80px;
+      margin-bottom: 5px;
+
+    }
+    .welcome-p {
+      font-size: 15px;
+    }
+/*----------------- about -----------------*/
+    #about {
+      padding: 80px 80px 0 0;
+      color: #fff;
+    } 
+
+    .row{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .aboutCol1{
+      padding-left: 120px;
+      margin-top: 200px;
+      flex-basis: 60%;
+      text-align: justify;
+    }
+    .title {
+      font-size: 60px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .about-p {
+      padding-right: 130px;
+    }
+    
   }
+
