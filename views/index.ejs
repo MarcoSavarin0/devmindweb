@@ -16,15 +16,16 @@
     <nav class="navbar">
       <i class="fa-solid fa-bars"></i>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About us</a></li>
-        <li><a href="">Developers</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#developers">Developers</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   
   <section>
+    <p id="header">home nashe</p>
     <div class="welcome-box">
       <h1 class="welcome-h1">
         Welcome <br>
@@ -51,14 +52,14 @@
   </div>
 <!-------------------------- developers ------------------------->
 <div>
-  <div class="container2">
+  <div class="container2" id="developers">
       <h1 class="subTitle2">Developers</h1>
       <div class="servicesList">
       </div>
   </div>
 </div>
 
-<div id="developers" class="developers">
+<div class="developers">
 <%- include('./partials/cardFran') %>
 <%- include('./partials/cardFacu') %>
 <%- include('./partials/cardMarco') %>
@@ -72,7 +73,7 @@
   <div class="container3">
     <div class="row2">
       <div class="contactLeft">
-        <h1 class="subTitle2">Contact Us</h1>
+        <h1 class="subTitle3">Contact Us</h1>
         <p><i class="fas fa-paper-plane"></i>e-mail@ejemplo.com</p>
         <p><i class="fas fa-phone-square-alt"></i>tel num</p>
         <div class="socialIcons">
@@ -91,6 +92,10 @@
   </div>
 </div>
 <script src="/javascripts/contactForm.js"></script>
+
+<div class="copyright">
+  <p>Copyright © DevMinds. Made by DevMinds' Developer Team</p>
+</div>
 
 </body>
 </html>
