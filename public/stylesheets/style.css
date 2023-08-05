@@ -67,17 +67,17 @@
     justify-content: center;
   }
   #about, .row ,.aboutCol1, .title , .about-p, .aboutCol2,.about-img{
-    background-color: #05347E;
+    background-color: #0b377f;
   }
   .about-img, .title{
     margin: 15px 0 ;
   }
   #about{
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
 
   .container {
-    margin: 400px 0;
+    margin: 10px 0;
   }
 
   .subTitle2{
@@ -108,6 +108,13 @@
       display: flex;
       flex-direction: row; 
       background-color: #05337e00;
+    }
+    .contactRight {
+      flex-basis: 45%;
+      margin-top: 20px;
+    }
+    .container {
+      margin: 400px 0;
     }
    
   }
@@ -215,14 +222,19 @@
     .aboutCol2 img {
       width: 650px;
     } 
+    .contactRight {
+      flex-basis: 45%;
+      margin-top: 20px;
+    }
   }
 /* -------------------- developers --------------------- */
   
   .developers {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   justify-content: space-around;
+  
   }
 
   .card-client {
@@ -374,7 +386,7 @@
   /* Estilos para la sección "Contact Us" */
   #contact {
     padding: 50px 0;
-    background-color: #333;
+    background-color: #202020;
   }
   
   .subTitle {
@@ -388,7 +400,7 @@
   }
   
   .contactRight {
-    flex-basis: 45%;
+    
     margin-top: 20px;
   }
   
@@ -396,9 +408,9 @@
   .contactRight textarea {
     width: 100%;
     padding: 10px;
-    background-color: #a8a8a8;
+    background-color: #d0d0d0;
     color: #000;
-    border: 1px solid #bbb;
+    border: 1px solid #cacaca;
     border-radius: 5px;
     margin-bottom: 15px;
   }
@@ -450,5 +462,6 @@
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: #111111;
   }
+
