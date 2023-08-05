@@ -1,5 +1,4 @@
  *{
-    background-color: #05347E;
     color: #fff;
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +7,11 @@
     text-decoration: none;
     list-style: none;
   }
+
+  body {
+    background-color: #05347E;
+  }
+  
   /* mobile first */
   header {
     display: flex;
@@ -61,7 +65,7 @@
     justify-content: center;
   }
   #about, .row ,.aboutCol1, .title , .about-p, .aboutCol2,.about-img{
-    background-color: #063A8C;
+    background-color: #05347E;
   }
   .about-img, .title{
     margin: 15px 0 ;
@@ -71,6 +75,7 @@
   }
   .subTitle2{
     text-align: center;
+    font-size: 60px;
   }
   .developers{
     margin-bottom: 10px;
@@ -132,6 +137,7 @@
     }
     .welcome-box {
       margin-top: 300px;
+      margin-bottom: 20vh;
       padding-left: 30px;
     }
     .welcome-h1 {
@@ -157,7 +163,6 @@
 
     .aboutCol1{
       padding-left: 120px;
-      margin-top: 200px;
       flex-basis: 60%;
       text-align: justify;
     }
@@ -179,20 +184,18 @@
       margin-left: 14px;
     }
     
-    .aboutCol2 {
-      border-radius: 3000px;
-    }
-
     .aboutCol2 img {
       width: 650px;
-      padding-top: 200px;
     } 
   }
-
-.developers {
+/* -------------------- developers --------------------- */
+  
+  .developers {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 100px;
   justify-content: space-around;
+  }
 
   .card-client {
     background: #0b2c60;
@@ -324,4 +327,91 @@
     opacity: 1;
     transform: translate(-50%, -130%);
   }
-}
+
+
+  /* <------------------- contact ------------------------------- > */
+
+  .container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para la sección "Contact Us" */
+  #contact {
+    padding: 50px 0;
+    background-color: #333;
+  }
+  
+  .subTitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .contactLeft {
+    flex-basis: 50%;
+  }
+  
+  .contactRight {
+    flex-basis: 45%;
+    margin-top: 20px;
+  }
+  
+  .contactRight input,
+  .contactRight textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #fef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .contactRight textarea {
+    resize: vertical;
+  }
+
+  .subTitle2 {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  .contactLeft p {
+    padding: 10px;
+  }
+
+  .contactLeft p i {
+    padding-right: 10px;
+  }
+
+  .socialIcons {
+    padding: 15px 0 10px 10px;
+  }
+  
+  .socialIcons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  button {
+    background-color: #0b2c60;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a3a9e4;
+  }
