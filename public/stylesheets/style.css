@@ -136,6 +136,21 @@
       z-index: 100;
     }
 
+    #videoBackground {
+      min-height: 100vh;
+      position: relative;
+
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
     .navbar {
       background-color: transparent;
       transition: background-color 0.5s ease; 
