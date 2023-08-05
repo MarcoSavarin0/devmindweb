@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/LOGO.ico" type="image/x-icon">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <link rel="stylesheet" href="/stylesheets/normalize.css">
   <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>DevMinds</title>
 </head>
 <body>
@@ -23,7 +25,7 @@
       </ul>
     </nav>
   </header>
-  <section id="videoBackground">
+  <section id="videoBackground" class="section-conteiner">
     <p id="header">home nashe</p>
     <div class="welcome-box">
       <h1 class="welcome-h1">
@@ -34,28 +36,31 @@
         Unleashing the Power of Web Development!
       </p>
     </div>
-    <video autoplay loop muted>
-      <source src="../videos/fondo.mp4" type="video/mp4">
+    <video autoplay muted loop id="background-video">
+      <source src="/videos/fondo.mp4" type="video/mp4">
+      <source src="/videos/fondo.webm" type="video/webm">
   </video>
-  <div class="capa"></div>
+</section>
   </section>
   <!-------------------------- about us ------------------------->
-  <div id="about">
-    <div class="container">
+  <div id="about" class="fade-in">
+    <div class="container" >
         <div class="row">
             <div class="aboutCol1">
                 <h1 class="title">About Us</h1>
                 <p class="about-p">Welcome to DevMinds! We are a dynamic and innovative web development company dedicated to transforming visions into reality. Our passion lies in creating exceptional web pages that not only mesmerize visitors but also empower businesses to thrive in the digital realm. As a team of skilled developers, designers, and creative minds, we take pride in delivering tailored solutions that cater to our clients' unique needs and aspirations.</p>
             </div>
+            <hr>
             <div class="aboutCol2">
-              <img src="/images/cobra.jpg" class="about-img">
             </div>
         </div>
     </div>
   </div>
+
 <!-------------------------- developers ------------------------->
 <div>
-  <div class="container2" id="developers">
+ 
+  <div class="container2"  id="developers">
       <h1 class="subTitle2">Developers</h1>
       <div class="servicesList">
       </div>
@@ -79,6 +84,7 @@
         <h1 class="subTitle3">Contact Us</h1>
         <p><i class="fas fa-paper-plane"></i>e-mail@ejemplo.com</p>
         <p><i class="fas fa-phone-square-alt"></i>tel num</p>
+        <p><i class="fa-solid fa-location-dot"></i>Santa Fe, Argentina</p>
         <div class="socialIcons">
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -94,6 +100,7 @@
     </div>
   </div>
 </div>
+
 <script src="/javascripts/contactForm.js"></script>
 
 <div class="copyright">

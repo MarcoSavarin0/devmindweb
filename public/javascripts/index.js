@@ -32,5 +32,15 @@ window.addEventListener('scroll', updateNavbarBackground);
 
 // Ejecutar la función al cargar la página para establecer el color de fondo inicial
 updateNavbarBackground();
+// Código para mostrar el título después de cargar la página
+window.addEventListener('load', function() {
+  const title = document.querySelector('.welcome-h1');
+  title.classList.add('show');
+});
 
-
+document.addEventListener('scroll', function() {
+  const aboutSection = document.getElementById('about');
+  if (isElementInViewport(aboutSection)) {
+    aboutSection.classList.add('show');
+  }
+});

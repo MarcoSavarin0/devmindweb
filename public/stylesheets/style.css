@@ -13,7 +13,7 @@
   }
 
   body {
-    background-color: #05347E;
+    background-color: #05337e;
   }
   
   /* mobile first */
@@ -22,8 +22,42 @@
     flex-direction: column;
     align-items: center;
     background-color: black;
-    padding-bottom: 5px;
+  }
+  #videoBackground {
+    position: relative;
+    overflow: hidden;
+  }
   
+  .welcome-box {
+    position: relative; /* Asegura que el contenido del div esté encima del video */
+    z-index: 1; /* Asegura que el contenido esté por encima del video */
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño del video para que cubra toda la sección */
+    z-index: 0; /* Asegura que el video esté detrás del contenido */
+    opacity: 0.5; /* Ajusta la opacidad del video para que el texto sea más legible */
+  }
+  
+  /* Asegura que el video no sea seleccionable ni interactuable */
+  #background-video::-webkit-media-controls {
+    display: none !important;
+  }
+  
+  #background-video::-webkit-media-controls-panel {
+    display: none !important;
+  }
+  
+  #background-video::media-controls-start-playback-button {
+    display: none !important;
+  }
+  .section-conteiner{
+    position: relative;
   }
   
   .logo {
@@ -59,16 +93,23 @@
   }
   
   .welcome-box{
-    padding: 50px 10px;
+    padding: 60px 10px;
   }
   .title{
     text-align: center;
-  }
-  .about-p{
-    text-align: center;
     
   }
-  .aboutCol2{
+  .about-p{
+    text-align: justify;
+    font-size: 19px;
+    margin: 0 13px;
+  }
+  .aboutCol2 {
+    background-image: url('../images/computadora.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 300px; 
     display: flex;
     justify-content: center;
   }
@@ -78,12 +119,13 @@
   .about-img, .title{
     margin: 15px 0 ;
   }
+
   #about{
-    padding-bottom: 10px;
+    padding-bottom: 9px;
   }
 
   .container {
-    margin: 400px 0;
+    margin: 10px 0;
   }
 
   .subTitle2{
@@ -100,6 +142,9 @@
   }
   /* tablet */
   @media (min-width:560px) {
+    hr{
+      display: none;
+    }
     header{
       background-color: #05337e00;
     }
@@ -116,6 +161,13 @@
       flex-direction: row; 
       background-color: #05337e00;
     }
+    .contactRight {
+      flex-basis: 45%;
+      margin-top: 20px;
+    }
+    .container {
+      margin: 400px 0;
+    }
    
   }
   /* computadoras */
@@ -125,6 +177,7 @@
       margin: 0;
      
     }
+    
     header {
       display: flex;
       flex-direction: row;
@@ -187,7 +240,9 @@
     .navbar ul li a:hover:after {
       width: 100%;
     }
-
+    .section-conteiner{
+      padding-bottom: 40vh;
+    }
     .welcome-box {
       margin-top: 300px;
       padding-left: 30px;
@@ -235,17 +290,27 @@
       margin-left: 14px;
     }
     
-    .aboutCol2 img {
-      width: 650px;
+    .aboutCol2 {
+      background-image: url('../images/computadora.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-width: 600px;
+      
     } 
+    .contactRight {
+      flex-basis: 45%;
+      margin-top: 20px;
+    }
   }
 /* -------------------- developers --------------------- */
   
   .developers {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 26vh;
   justify-content: space-around;
+  
   }
 
   .card-client {
@@ -397,7 +462,7 @@
   /* Estilos para la sección "Contact Us" */
   #contact {
     padding: 50px 0;
-    background-color: #333;
+    background-color: #202020;
   }
   
   .subTitle {
@@ -411,7 +476,7 @@
   }
   
   .contactRight {
-    flex-basis: 45%;
+    
     margin-top: 20px;
   }
   
@@ -419,9 +484,9 @@
   .contactRight textarea {
     width: 100%;
     padding: 10px;
-    background-color: #a8a8a8;
+    background-color: #d0d0d0;
     color: #000;
-    border: 1px solid #bbb;
+    border: 1px solid #cacaca;
     border-radius: 5px;
     margin-bottom: 15px;
   }
@@ -473,5 +538,25 @@
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: #111111;
   }
+/* Estilos para el h1 */
+.welcome-h1 {
+  opacity: 0; /* Empezar con opacidad 0 para que el texto esté oculto al principio */
+  transform: translateY(-20px); /* Empezar desplazado hacia arriba 20px */
+  transition: opacity 2s, transform 2s; /* Definimos una transición para animar la opacidad y el desplazamiento */
+}
+
+/* Clase para mostrar el título */
+.welcome-h1.show {
+  opacity: 1; /* Cuando se añade esta clase, el título se vuelve visible */
+  transform: translateY(0); /* Cuando se añade esta clase, el título vuelve a su posición original */
+}
+
+
+:target:before {
+  content: "";
+  display: block;
+  height: 200px; /* Ajusta esto según tus necesidades */
+  margin: -100px 0 0; /* Ajusta esto según la altura de tu navbar y el valor de compensación deseado */
+}

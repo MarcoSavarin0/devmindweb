@@ -40,3 +40,5 @@ form.addEventListener('submit', e => {
       })
       .catch(error => console.error('Error!', error.message))
 })
+// Código para manejar el progreso de la barra al hacer scroll
+// Código para manejar el progreso de la barra al hacer scroll
