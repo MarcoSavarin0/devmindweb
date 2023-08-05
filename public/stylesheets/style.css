@@ -560,3 +560,18 @@
   height: 200px; /* Ajusta esto según tus necesidades */
   margin: -100px 0 0; /* Ajusta esto según la altura de tu navbar y el valor de compensación deseado */
 }
+
+/* barra de navegacion */
+body::-webkit-scrollbar {
+  width: 10px;               
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(11, 11, 11);   
+  border-radius: 20px;       
+  
+}
