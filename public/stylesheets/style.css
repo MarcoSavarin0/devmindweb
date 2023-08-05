@@ -1,5 +1,4 @@
  *{
-    background-color: #05347E;
     color: #fff;
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +7,11 @@
     text-decoration: none;
     list-style: none;
   }
+
+  body {
+    background-color: #05347E;
+  }
+  
   /* mobile first */
   header {
     display: flex;
@@ -43,6 +47,10 @@
     padding: 10px;
     
   }
+
+  section p {
+    opacity: 0;
+  }
   
   .welcome-box{
     padding: 50px 10px;
@@ -59,7 +67,7 @@
     justify-content: center;
   }
   #about, .row ,.aboutCol1, .title , .about-p, .aboutCol2,.about-img{
-    background-color: #063A8C;
+    background-color: #05347E;
   }
   .about-img, .title{
     margin: 15px 0 ;
@@ -67,11 +75,19 @@
   #about{
     padding-bottom: 10px;
   }
+
+  .container {
+    margin: 400px 0;
+  }
+
   .subTitle2{
+    margin-top: 100px;
+    font-size: 60px;
     text-align: center;
   }
   .developers{
     margin-bottom: 10px;
+    text-align: center;
   }
   .card-client{
     margin-bottom: 20px;
@@ -117,7 +133,7 @@
       transition: background-color 0.5s ease; 
     }
     .navbar.black-bg {
-  background-color: black; /* Cambia el color a negro */
+      background-color: black; /* Cambia el color a negro */
 }
     .navbar ul {
       flex-direction: row; 
@@ -128,6 +144,27 @@
       padding: 0 15px; 
       background-color: transparent;
     }
+
+    .navbar ul li a {
+      color: #fff;
+      position: relative;
+    }
+
+    .navbar ul li a::after {
+      content: '';
+      width: 0;
+      height: 3px;
+      background: #3b82f5;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 0.5s;
+    }
+
+    .navbar ul li a:hover:after {
+      width: 100%;
+    }
+
     .welcome-box {
       margin-top: 300px;
       padding-left: 30px;
@@ -144,9 +181,8 @@
     #about {
       padding: 80px 80px 0 0;
       color: #fff;
-      
     } 
-
+    
     .row{
       display: flex;
       justify-content: space-between;
@@ -155,7 +191,6 @@
 
     .aboutCol1{
       padding-left: 120px;
-      margin-top: 200px;
       flex-basis: 60%;
       text-align: justify;
     }
@@ -177,20 +212,18 @@
       margin-left: 14px;
     }
     
-    .aboutCol2 {
-      border-radius: 3000px;
-    }
-
     .aboutCol2 img {
       width: 650px;
-      padding-top: 200px;
     } 
   }
-
-.developers {
+/* -------------------- developers --------------------- */
+  
+  .developers {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 100px;
   justify-content: space-around;
+  }
 
   .card-client {
     background: #0b2c60;
@@ -322,4 +355,100 @@
     opacity: 1;
     transform: translate(-50%, -130%);
   }
-}
+
+
+  /* <------------------- contact ------------------------------- > */
+
+  .container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para la sección "Contact Us" */
+  #contact {
+    padding: 50px 0;
+    background-color: #333;
+  }
+  
+  .subTitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .contactLeft {
+    flex-basis: 50%;
+  }
+  
+  .contactRight {
+    flex-basis: 45%;
+    margin-top: 20px;
+  }
+  
+  .contactRight input,
+  .contactRight textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #a8a8a8;
+    color: #000;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .contactRight textarea {
+    resize: vertical;
+  }
+
+  .subTitle3 {
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
+
+  .contactLeft p {
+    padding: 10px;
+  }
+
+  .contactLeft p i {
+    padding-right: 10px;
+    font-size: 25px;
+  }
+
+  .socialIcons {
+    padding: 15px 0 10px 10px;
+  }
+  
+  .socialIcons a {
+    display: inline-block;
+    margin-right: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  button {
+    background-color: #0b2c60;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a3a9e4;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+  }
