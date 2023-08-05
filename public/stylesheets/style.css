@@ -57,7 +57,7 @@
     display: none !important;
   }
   .section-conteiner{
-   padding-bottom: 300px;
+    position: relative;
   }
   
   .logo {
@@ -189,6 +189,21 @@
       z-index: 100;
     }
 
+    #videoBackground {
+      min-height: 100vh;
+      position: relative;
+
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
     .navbar {
       background-color: transparent;
       transition: background-color 0.5s ease; 
@@ -293,7 +308,7 @@
   .developers {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 90px;
+  margin-bottom: 26vh;
   justify-content: space-around;
   
   }
