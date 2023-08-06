@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/st">
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/stylesheets/error404.css">
   <title>Document</title>
 </head>
 <body>
-  
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <div class="error-message">UPS.. Page not found</div>
+    <a class="back-link" href="/">Back to Page</a>
+  </div>
 </body>
 </html>

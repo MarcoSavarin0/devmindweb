@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/images/LOGO.ico" type="image/x-icon">
+  <%- include('./partials/head.ejs') %>
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <script src="https://kit.fontawesome.com/4d18b4db01.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>DevMinds</title>
 </head>
 <body>
-  <header>
-    <img src="/images/LOGO.png" class="logo">
-    <nav class="navbar">
-      <i class="fa-solid fa-bars"></i>
-      <ul>
-        <li><a href="#header">Home</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#developers">Developers</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <%- include('./partials/navBar.ejs') %>
+  
   <section id="videoBackground" class="section-conteiner">
     <p id="header">home nashe</p>
     <div class="welcome-box">
@@ -43,7 +26,7 @@
 </section>
   </section>
   <!-------------------------- about us ------------------------->
-  <div id="about" class="fade-in">
+  <div id="about">
     <div class="container" >
         <div class="row">
             <div class="aboutCol1">
@@ -58,20 +41,20 @@
   </div>
 
 <!-------------------------- developers ------------------------->
-<div>
- 
-  <div class="container2"  id="developers">
-      <h1 class="subTitle2">Developers</h1>
-      <div class="servicesList">
-      </div>
+<main class="developers-main">
+  <div>
+    <div class="container2"  id="developers">
+        <h1 class="subTitle2">Developers</h1>
+        <div class="servicesList">
+        </div>
+    </div>
   </div>
-</div>
-
-<div class="developers">
-<%- include('./partials/cardFran') %>
-<%- include('./partials/cardFacu') %>
-<%- include('./partials/cardMarco') %>
-</div>
+  <div class="developers">
+    <%- include('./partials/cardFran') %>
+    <%- include('./partials/cardFacu') %>
+    <%- include('./partials/cardMarco') %>
+  </div>
+</main>
 <script src="/javascripts/index.js"></script>
 
 
@@ -82,13 +65,13 @@
     <div class="row2">
       <div class="contactLeft">
         <h1 class="subTitle3">Contact Us</h1>
-        <p><i class="fas fa-paper-plane"></i>e-mail@ejemplo.com</p>
-        <p><i class="fas fa-phone-square-alt"></i>tel num</p>
+        <p><i class="fas fa-paper-plane"></i>devmindsbusiness@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i>+54 3424722458</p>
         <p><i class="fa-solid fa-location-dot"></i>Santa Fe, Argentina</p>
         <div class="socialIcons">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/devminds_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/devminds_" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/devminds8" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
       </div>
       <div class="contactRight">

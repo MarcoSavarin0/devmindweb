@@ -1,22 +1,22 @@
-// Obtener el elemento del header/navbar
+
 const header = document.querySelector('header');
 
-// Obtener la altura después de la cual se cambia el color de fondo (ajústalo según tus necesidades)
+
 const scrollThreshold = 100;
 
-// Función para agregar el efecto de fade in
+
 function fadeInNavbarBackground() {
-  header.style.transition = 'background-color 0.5s ease'; // Establece la transición para el fade in
-  header.style.backgroundColor = 'black'; // Cambia el color a negro
+  header.style.transition = 'background-color 0.5s ease'; 
+  header.style.backgroundColor = 'black'; 
 }
 
-// Función para agregar el efecto de fade out
+
 function fadeOutNavbarBackground() {
-  header.style.transition = 'background-color 0.5s ease'; // Establece la transición para el fade out
-  header.style.backgroundColor = 'transparent'; // Cambia el color a transparente
+  header.style.transition = 'background-color 0.5s ease'; 
+  header.style.backgroundColor = 'transparent'; 
 }
 
-// Función para cambiar el color de fondo del header/navbar
+
 function updateNavbarBackground() {
   if (window.innerWidth >= 768) {
     if (window.scrollY >= scrollThreshold) {
@@ -27,12 +27,12 @@ function updateNavbarBackground() {
   }
 }
 
-// Agregar el evento de scroll para ejecutar la función cuando se hace scroll
+
 window.addEventListener('scroll', updateNavbarBackground);
 
-// Ejecutar la función al cargar la página para establecer el color de fondo inicial
+
 updateNavbarBackground();
-// Código para mostrar el título después de cargar la página
+
 window.addEventListener('load', function() {
   const title = document.querySelector('.welcome-h1');
   title.classList.add('show');
@@ -43,4 +43,39 @@ document.addEventListener('scroll', function() {
   if (isElementInViewport(aboutSection)) {
     aboutSection.classList.add('show');
   }
+});
+
+$(document).ready(function() {
+
+  $('a[href="#about-link"]').click(function(e) {
+      e.preventDefault();
+     
+      var aboutOffset = $("#about").offset().top;
+     
+      $('html, body').animate({ scrollTop: aboutOffset }, 1000);
+  });
+
+ 
+  $(window).scroll(function() {
+      var viewportTop = $(window).scrollTop();
+      var aboutOffset = $("#about").offset().top;
+      var showOffset = aboutOffset - ($(window).height() / 2);
+      if (viewportTop > showOffset) {
+          $("#about").addClass("show");
+      }
+  });
+});
+
+$(document).ready(function() {
+
+  $(window).scroll(function() {
+
+    var viewportTop = $(window).scrollTop();
+  
+    var developersOffset = $("#developers").offset().top;
+    var showOffset = developersOffset - ($(window).height() / 2);
+    if (viewportTop > showOffset) {
+      $(".developers").addClass("show");
+    }
+  });
 });

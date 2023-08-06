@@ -29,8 +29,8 @@
   }
   
   .welcome-box {
-    position: relative; /* Asegura que el contenido del div esté encima del video */
-    z-index: 1; /* Asegura que el contenido esté por encima del video */
+    position: relative; 
+    z-index: 1;
   }
   
   #background-video {
@@ -39,12 +39,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta el tamaño del video para que cubra toda la sección */
-    z-index: 0; /* Asegura que el video esté detrás del contenido */
-    opacity: 0.5; /* Ajusta la opacidad del video para que el texto sea más legible */
+    object-fit: cover; 
+    z-index: 0;
+    opacity: 0.5; 
   }
   
-  /* Asegura que el video no sea seleccionable ni interactuable */
+
   #background-video::-webkit-media-controls {
     display: none !important;
   }
@@ -183,9 +183,9 @@
       flex-direction: row;
       align-items: center; 
       justify-content: space-between; 
-      position: fixed; /* Cambia a 'fixed' */
-      top: 0; /* Asegura que el header esté en la parte superior de la página */
-      width: 100%; /* Asegura que el header ocupe todo el ancho */
+      position: fixed; 
+      top: 0;
+      width: 100%;
       z-index: 100;
     }
 
@@ -540,28 +540,46 @@
     padding: 25px 0;
     background: #111111;
   }
-/* Estilos para el h1 */
+
 .welcome-h1 {
-  opacity: 0; /* Empezar con opacidad 0 para que el texto esté oculto al principio */
-  transform: translateY(-20px); /* Empezar desplazado hacia arriba 20px */
-  transition: opacity 2s, transform 2s; /* Definimos una transición para animar la opacidad y el desplazamiento */
+  opacity: 0; 
+  transform: translateY(-20px); 
+  transition: opacity 2s, transform 2s; 
 }
 
-/* Clase para mostrar el título */
+
 .welcome-h1.show {
-  opacity: 1; /* Cuando se añade esta clase, el título se vuelve visible */
-  transform: translateY(0); /* Cuando se añade esta clase, el título vuelve a su posición original */
+  opacity: 1; 
+  transform: translateY(0); 
+}
+#about {
+  opacity: 0;
+  transition: opacity 1s ease; 
 }
 
+#about.show {
+  opacity: 1; 
+}
+
+.developers-main .developers.show {
+  opacity: 1;
+  transition: opacity 1s ease;
+
+}
+
+
+.developers-main .developers {
+  opacity: 0;
+}
 
 :target:before {
   content: "";
   display: block;
-  height: 200px; /* Ajusta esto según tus necesidades */
-  margin: -100px 0 0; /* Ajusta esto según la altura de tu navbar y el valor de compensación deseado */
+  height: 200px;
+  margin: -100px 0 0; 
 }
 
-/* barra de navegacion */
+
 body::-webkit-scrollbar {
   width: 10px;               
 }
