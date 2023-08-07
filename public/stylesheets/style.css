@@ -13,7 +13,7 @@
   }
 
   body {
-    background-color: #05337e;
+    background-color: #0b1017;
   }
   
   /* mobile first */
@@ -78,7 +78,7 @@
     margin: 5px 15px; 
     
   }
-  .navbar ul{
+  .menu-list li{
     display: none;
   }
   .fa-bars{
@@ -95,51 +95,48 @@
   .welcome-box{
     padding: 60px 10px;
   }
-  .title{
+  #about, .aboutCol1, .aboutCol2 {
+    padding: 20px;
+  }
+  
+  /* Título */
+  .title {
     text-align: center;
-    
+    margin: 10px 0;
+    font-size: 28px;
+    color: #fff;
   }
-  .about-p{
+
+  /* Párrafo de descripción */
+  .about-p {
     text-align: justify;
-    font-size: 19px;
-    margin: 0 13px;
+    font-size: 16px;
+    margin: 10px 0;
+    color: #fff;
   }
+
+  /* Imagen de fondo */
   .aboutCol2 {
     background-image: url('../images/computadora.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 300px; 
+    min-height: 200px; /* Ajusta la altura según tus necesidades */
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 8px ;
   }
-  #about, .row ,.aboutCol1, .title , .about-p, .aboutCol2,.about-img{
-    background-color: #05347E;
-  }
-  .about-img, .title{
-    margin: 15px 0 ;
-  }
-
-  #about{
-    padding-bottom: 9px;
-  }
-
-  .container {
-    margin: 10px 0;
-  }
-
-  .subTitle2{
-    margin-top: 100px;
-    font-size: 60px;
-    text-align: center;
-  }
+ 
   .developers{
-    margin-bottom: 10px;
+    margin: 20px 0px;
     text-align: center;
   }
   .card-client{
     margin-bottom: 20px;
   }
+
   /* tablet */
   @media (min-width:560px) {
     hr{
@@ -156,6 +153,9 @@
       width: 30vw;
       background-color: #05337e00;
     }
+    .navbar li {
+      display: flex;
+    }
     .navbar ul{
       display: flex;
       flex-direction: row; 
@@ -168,7 +168,9 @@
     .container {
       margin: 400px 0;
     }
-   
+   .scroll-to-top-btn{
+    display: none;
+   }
   }
   /* computadoras */
   @media (min-width:768px) {
@@ -177,7 +179,9 @@
       margin: 0;
      
     }
-    
+    .scroll-to-top-btn{
+      display: none;
+     }
     header {
       display: flex;
       flex-direction: row;
@@ -295,7 +299,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      min-width: 600px;
+      width: 30%;
       
     } 
     .contactRight {
@@ -314,7 +318,7 @@
   }
 
   .card-client {
-    background: #0b2c60;
+    background: #0e2140;
     width: 20rem;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -334,7 +338,7 @@
   }
   
   .user-picture {
-    background-color: #0b2c60;
+    background-color: #0e2140;
     width: 5rem;
     height: 5rem;
     border: 4px solid #fff;
@@ -358,7 +362,7 @@
     border-radius: 999px;
   }
   .name-client {
-    background-color: #0b2c60;
+    background-color: #0e2140;
     margin: 0;
     margin-top: 20px;
     font-weight: 600;
@@ -366,18 +370,18 @@
   }
   
   .name-client span {
-    background-color: #0b2c60;
+    background-color: #0e2140;
     display: block;
     font-weight: 200;
     font-size: 16px;
   }
 
   .social-media {
-    background-color: #0b2c60;
+    background-color: #0e2140;
   }
 
   .social-media i{
-    background-color: #0b2c60;
+    background-color: #0e2140;
     font-size: 23px;
   }
   
@@ -593,3 +597,50 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       
   
 }
+
+/* navbar desplegable */
+@media screen and (max-width: 760px){ 
+  .scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #0056b3;
+}
+  .navbar {
+    display: block;
+    width: 100%;
+  }
+  .fa-bars{
+    margin: 0 1%;
+  }
+  .show-menu li{
+    display: flex;
+    z-index: 1;
+    padding: 5px;
+  }
+  .show-menu{
+    background-color: #000000;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+ 
+  .show-menu {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+ 
+  
+ 

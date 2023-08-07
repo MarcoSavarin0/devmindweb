@@ -79,3 +79,39 @@ $(document).ready(function() {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuList = document.getElementById('menu-list');
+
+  menuToggle.addEventListener('click', () => {
+    menuList.classList.toggle('show-menu');
+    menuList.classList.toggle('show-items');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!menuList.contains(event.target) && !menuToggle.contains(event.target)) {
+      menuList.classList.remove('show-menu');
+      menuList.classList.remove('show-items');
+    }
+  });
+});
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Mostrar u ocultar el botón según la posición del scroll y el ancho de la ventana
+window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (window.innerWidth <= 767) {
+            scrollToTopBtn.style.display = "block";
+        }
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+// Volver arriba cuando se hace clic en el botón
+scrollToTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
