@@ -82,16 +82,18 @@ $(document).ready(function() {
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const menuList = document.getElementById('menu-list');
-
+  const close = document.getElementById('close-button')
   menuToggle.addEventListener('click', () => {
     menuList.classList.toggle('show-menu');
     menuList.classList.toggle('show-items');
+    close.classList.toggle('show-cruz')
   });
 
   document.addEventListener('click', (event) => {
     if (!menuList.contains(event.target) && !menuToggle.contains(event.target)) {
       menuList.classList.remove('show-menu');
       menuList.classList.remove('show-items');
+      close.classList.remove('show-cruz')
     }
   });
 });

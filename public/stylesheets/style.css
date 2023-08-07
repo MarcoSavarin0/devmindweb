@@ -300,11 +300,15 @@
       background-repeat: no-repeat;
       background-position: center center;
       width: 30%;
-      
+      border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%
+                    
     } 
     .contactRight {
       flex-basis: 45%;
       margin-top: 20px;
+    }
+    .close-button{
+      opacity: 0;
     }
   }
 /* -------------------- developers --------------------- */
@@ -612,7 +616,19 @@ body::-webkit-scrollbar-thumb {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    animation: fadeIn 0.5s ease-in-out forwards; 
 }
+ 
+@keyframes fadeIn { 
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  } 
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+} 
 
 .scroll-to-top-btn:hover {
     background-color: #0056b3;
@@ -629,18 +645,36 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     padding: 5px;
   }
+  .menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    transition: left 0.5s ease-in-out;
+  }
   .show-menu{
     background-color: #000000;
+    left: 0;
+  }
+  .close-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease;
   }
- 
-  .show-menu {
+  .show-cruz {
     opacity: 1;
-    transform: translateX(0);
   }
-
+  .close-button:hover {
+    color: #fbfbfb;
+  }
 }
- 
-  
+
  
