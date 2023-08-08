@@ -327,15 +327,28 @@
 
 .servicesList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   grid-gap: 40px;
   margin-top: 50px;
   margin-right: 85px;
   margin-left: 85px;
 }
 
+.extendedServices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-right: 85px;
+  margin-left: 85px;
+  grid-row: 3; /* Coloca esta sección en la tercera fila */
+}
 
-.servicesList div{
+
+
+.servicesList div, .extendedServices div{
   background: #262626;
   padding: 40px;
   font-size: 14px;
@@ -344,18 +357,18 @@
   transition: background 0.5s, transform 0.5s;
 }
 
-.servicesList div i {
+.servicesList div i, .extendedServices div i {
   font-size: 50px;
   margin-bottom: 30px;
 }
 
-.servicesList div h2 {
+.servicesList div h2, .extendedServices div h2 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.servicesList div a {
+.servicesList div a, .extendedServices div a {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
@@ -363,7 +376,7 @@
   display: inline-block;
 }
 
-.servicesList div:hover {
+.servicesList div:hover, .extendedServices div:hover{
   transform: translateY(-10px);
 }
 
