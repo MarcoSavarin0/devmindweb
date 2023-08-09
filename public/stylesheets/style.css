@@ -121,7 +121,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 200px; /* Ajusta la altura según tus necesidades */
+    min-height: 200px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,7 +214,7 @@
       transition: background-color 0.5s ease; 
     }
     .navbar.black-bg {
-      background-color: black; /* Cambia el color a negro */
+      background-color: black; 
 }
     .navbar ul {
       flex-direction: row; 
@@ -319,6 +319,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 10vw;
 }
 #services {
   padding: 2rem 0;
@@ -344,7 +345,7 @@
 
 .servicesList div,
 .extendedServices div {
-  background: #262626;
+  background: #0e2140ce;
   padding: 40px;
   font-size: 14px;
   font-weight: 350;
@@ -356,7 +357,13 @@
   justify-content: center;
   text-align: justify;
 }
-
+.servicesList p , .extendedServices p{
+  opacity: 0;
+}
+.servicesList div:hover p , .extendedServices div:hover p{
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
 .servicesList div i,
 .extendedServices div i {
   font-size: 50px;
@@ -368,15 +375,6 @@
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 15px;
-}
-
-.servicesList div a,
-.extendedServices div a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 12px;
-  margin-top: 20px;
-  display: inline-block;
 }
 
 .servicesList div:hover,
@@ -399,6 +397,7 @@
   flex-wrap: wrap;
   margin-bottom: 26vh;
   justify-content: space-around;
+  padding-bottom: 10vw;
   
   }
 
@@ -638,8 +637,16 @@
   transform: translateY(-20px); 
   transition: opacity 2s, transform 2s; 
 }
+#services {
+  opacity: 0;
+  transform: translateY(30px); 
+  transition: opacity 1s ease, transform 1s ease;
+}
 
-
+#services.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 .welcome-h1.show {
   opacity: 1; 
   transform: translateY(0); 

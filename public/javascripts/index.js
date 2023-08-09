@@ -38,12 +38,20 @@ window.addEventListener('load', function() {
   title.classList.add('show');
 });
 
-document.addEventListener('scroll', function() {
-  const aboutSection = document.getElementById('about');
-  if (isElementInViewport(aboutSection)) {
-    aboutSection.classList.add('show');
-  }
+
+const servicesElement = document.getElementById('services');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      servicesElement.classList.add('show');
+      observer.unobserve(entry.target); 
+    }
+  });
 });
+
+observer.observe(servicesElement);
+
 
 $(document).ready(function() {
 
@@ -79,6 +87,10 @@ $(document).ready(function() {
     }
   });
 });
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const menuList = document.getElementById('menu-list');
@@ -100,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Mostrar u ocultar el botón según la posición del scroll y el ancho de la ventana
 window.addEventListener("scroll", () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         if (window.innerWidth <= 767) {
@@ -110,8 +121,6 @@ window.addEventListener("scroll", () => {
         scrollToTopBtn.style.display = "none";
     }
 });
-
-// Volver arriba cuando se hace clic en el botón
 scrollToTopBtn.addEventListener("click", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
