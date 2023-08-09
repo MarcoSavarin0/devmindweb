@@ -61,7 +61,7 @@
   }
   
   .logo {
-    width: 35vw;
+    width: 25vw;
     flex-shrink: 0;
     margin: auto;
     background-color: black
@@ -138,7 +138,7 @@
   }
 
   /* tablet */
-  @media (min-width:560px) {
+  @media (min-width:760px) {
     hr{
       display: none;
     }
@@ -191,6 +191,7 @@
       top: 0;
       width: 100%;
       z-index: 100;
+      height: 150px;
     }
 
     #videoBackground {
@@ -314,8 +315,13 @@
   }
 
 /* -------------------- services --------------------- */
+.container1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 #services {
-  padding: 0 0;
+  padding: 2rem 0;
 }
 
 .titleSer {
@@ -325,16 +331,7 @@
   color: #fff;
 }
 
-.servicesList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  grid-gap: 40px;
-  margin-top: 50px;
-  margin-right: 85px;
-  margin-left: 85px;
-}
-
+.servicesList,
 .extendedServices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -343,32 +340,38 @@
   margin-top: 50px;
   margin-right: 85px;
   margin-left: 85px;
-  grid-row: 3; /* Coloca esta sección en la tercera fila */
 }
 
-
-
-.servicesList div, .extendedServices div{
+.servicesList div,
+.extendedServices div {
   background: #262626;
   padding: 40px;
   font-size: 14px;
   font-weight: 350;
   border-radius: 7px;
   transition: background 0.5s, transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
 }
 
-.servicesList div i, .extendedServices div i {
+.servicesList div i,
+.extendedServices div i {
   font-size: 50px;
   margin-bottom: 30px;
 }
 
-.servicesList div h2, .extendedServices div h2 {
+.servicesList div h2,
+.extendedServices div h2 {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
-.servicesList div a, .extendedServices div a {
+.servicesList div a,
+.extendedServices div a {
   text-decoration: none;
   color: #fff;
   font-size: 12px;
@@ -376,9 +379,18 @@
   display: inline-block;
 }
 
-.servicesList div:hover, .extendedServices div:hover{
+.servicesList div:hover,
+.extendedServices div:hover {
   transform: translateY(-10px);
+  box-shadow: 20px 22px 13px -3px rgba(0, 0, 0, 0.249);
 }
+@media (max-width:768px) {
+  .servicesList div,
+.extendedServices div{
+  text-align: center;
+}
+}
+
 
 /* -------------------- developers --------------------- */
   
@@ -519,6 +531,9 @@
   .social-media a:hover .tooltip-social {
     opacity: 1;
     transform: translate(-50%, -130%);
+  }
+  .subTitle2{
+    font-size: 60px;
   }
 
 
