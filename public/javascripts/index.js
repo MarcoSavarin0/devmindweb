@@ -152,3 +152,11 @@ $(window).scroll( function(){
         }
     });
 });
+
+console.log('Hola te quiero!');
+console.log("   /-_-\\");
+console.log("  (     )");
+console.log("   \\ *_/");
+console.log("    /-\\");
+console.log("   /   \\");
+let messi = 'The Best'
