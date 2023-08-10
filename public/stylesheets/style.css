@@ -136,6 +136,10 @@
     margin-bottom: 20px;
   }
 
+  .copyright {
+    font-size: 12px;
+  }
+
   /* tablet */
   @media (min-width:760px) {
     hr{
@@ -732,9 +736,16 @@
 
   .contactLeft p {
     padding: 10px;
+    padding-right: 50px;
+  }
+
+  .contactLeft p a {
+    display: inline;
+    margin: 0;
   }
 
   .contactLeft p i {
+    display: inline;
     padding-right: 10px;
     font-size: 25px;
   }
