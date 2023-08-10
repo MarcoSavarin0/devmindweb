@@ -56,6 +56,7 @@
   #background-video::media-controls-start-playback-button {
     display: none !important;
   }
+  
   .section-conteiner{
     position: relative;
   }
@@ -169,7 +170,8 @@
       margin-top: 20px;
     }
     .container {
-      margin: 300px 100px  0 0;
+      margin: 5vh 100px  0 0;
+      
     }
    .scroll-to-top-btn{
     display: none;
@@ -805,6 +807,7 @@
 
 #about.show {
   opacity: 1; 
+  
 }
 
 .developers-main .developers.show {
