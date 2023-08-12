@@ -4,6 +4,10 @@ const header = document.querySelector('header');
 
 const scrollThreshold = 100;
 
+window.addEventListener('load', function() {
+  document.querySelector('.loader-container').style.display = 'none';
+});
+
 
 function fadeInNavbarBackground() {
   header.style.transition = 'background-color 0.5s ease'; 
