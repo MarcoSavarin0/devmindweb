@@ -157,6 +157,54 @@ $(window).scroll( function(){
     });
 });
 
+
+const languageSelect = document.getElementById("language-select");
+
+
+languageSelect.addEventListener("change", function() {
+  const selectedLanguage = languageSelect.value;
+  if (selectedLanguage === "en") {
+    window.location.href = "/"; 
+  } else if (selectedLanguage === "es") {
+    window.location.href = "/es"; 
+  }
+});
+
+
+
+const languageFromPath = window.location.pathname.split("/")[1];
+
+const navhome = document.getElementsByClassName('nav-home')[0]
+
+const navAbout = document.getElementsByClassName('nav-about')[0]
+
+const navService = document.getElementsByClassName('nav-service')[0]
+
+const navdev = document.getElementsByClassName('nav-dev')[0]
+
+const navcontact = document.getElementsByClassName('nav-contact')[0]
+
+
+
+if (languageFromPath === "es") {
+  languageSelect.value = "es";
+  navhome.innerText = 'Inicio'
+  navAbout.innerText = 'Sobre Nosotros'
+  navService.innerText = 'Servicios'
+  navdev.innerText = 'Desarrolladores'
+  navcontact.innerText = 'Contacto'
+  
+} else if (languageFromPath === "") {
+  languageSelect.value = "en";
+}
+
+
+
+
+
+
+
+
 console.log('Hola te quiero!');
 console.log("   /-_-\\");
 console.log("  (     )");
