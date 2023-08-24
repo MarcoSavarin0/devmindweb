@@ -87,6 +87,7 @@ $(document).ready(function() {
     var developersOffset = $("#developers").offset().top;
     var showOffset = developersOffset - ($(window).height() / 2);
     if (viewportTop > showOffset) {
+      $(".container2").addClass("show");
       $(".developers").addClass("show");
     }
   });
@@ -161,16 +162,7 @@ $(window).scroll( function(){
 const languageSelect = document.getElementById("language-select");
 
 
-languageSelect.addEventListener("change", function() {
-  const selectedLanguage = languageSelect.value;
-  if (selectedLanguage === "en") {
-    window.location.href = "/"; 
-  } else if (selectedLanguage === "es") {
-    window.location.href = "/es"; 
-  }
-});
-
-
+console.log(languageSelect.href)
 
 const languageFromPath = window.location.pathname.split("/")[1];
 
@@ -187,17 +179,14 @@ const navcontact = document.getElementsByClassName('nav-contact')[0]
 
 
 if (languageFromPath === "es") {
-  languageSelect.value = "es";
   navhome.innerText = 'Inicio'
   navAbout.innerText = 'Sobre Nosotros'
   navService.innerText = 'Servicios'
   navdev.innerText = 'Desarrolladores'
   navcontact.innerText = 'Contacto'
-  
-} else if (languageFromPath === "") {
-  languageSelect.value = "en";
+  languageSelect.innerText = "English"
+  languageSelect.href = "/"
 }
-
 
 
 

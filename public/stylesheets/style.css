@@ -234,7 +234,7 @@
       position: relative;
     }
 
-    .navbar ul li a::after {
+    .navbar ul li a::after{
       content: '';
       width: 0;
       height: 3px;
@@ -530,6 +530,9 @@
 .extendedServices div{
   text-align: center;
 }
+.container2 h2{
+  font-size: 40px;
+} 
 }
 
 
@@ -677,7 +680,9 @@
     font-size: 60px;
   }
 
-
+  .dev-title-es{
+    font-size: 60px;
+  }
   /* <------------------- contact ------------------------------- > */
 
   .container3 {
@@ -808,6 +813,17 @@
 #about.show {
   opacity: 1; 
   
+}
+
+.developers-main .container2.show {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+
+}
+
+
+.developers-main .container2 {
+  opacity: 0;
 }
 
 .developers-main .developers.show {
@@ -946,20 +962,4 @@ body::-webkit-scrollbar-thumb {
   100% { transform: rotate(360deg); }
 }
 
-.language-dropdown {
-  margin-left: 20px;
-  display: flex;
-}
 
-#language-select {
-  appearance: none;
-  background: none;
-  border: none;
-  color: #f0f0f0;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#language-select option {
-  background: #000000;
-}
