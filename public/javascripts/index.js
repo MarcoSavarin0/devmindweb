@@ -180,7 +180,7 @@ const navcontact = document.getElementsByClassName('nav-contact')[0]
 
 if (languageFromPath === "es") {
   navhome.innerText = 'Inicio'
-  navAbout.innerText = 'Sobre Nosotros'
+  navAbout.innerText = 'Nosotros'
   navService.innerText = 'Servicios'
   navdev.innerText = 'Desarrolladores'
   navcontact.innerText = 'Contacto'
