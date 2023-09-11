@@ -176,7 +176,9 @@ const navdev = document.getElementsByClassName('nav-dev')[0]
 
 const navcontact = document.getElementsByClassName('nav-contact')[0]
 
+const banderas = document.getElementById('banderas')
 
+const banderaUS = `<img id="banderas" class="bandera" src="/images/banderaUSA.png" alt="Bandera Argentina"> `
 
 if (languageFromPath === "es") {
   navhome.innerText = 'Inicio'
@@ -184,7 +186,7 @@ if (languageFromPath === "es") {
   navService.innerText = 'Servicios'
   navdev.innerText = 'Desarrolladores'
   navcontact.innerText = 'Contacto'
-  languageSelect.innerText = "English"
+  languageSelect.innerHTML = banderaUS
   languageSelect.href = "/"
 }
 

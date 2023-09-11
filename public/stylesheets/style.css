@@ -19,9 +19,10 @@
   /* mobile first */
   header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background-color: black;
+    justify-content: space-between;
   }
   #videoBackground {
     position: relative;
@@ -65,13 +66,15 @@
     width: 25vw;
     flex-shrink: 0;
     margin: auto;
-    background-color: black
+    background-color: black;
+    order: 3;
   }
   
   .navbar ul {
     display: flex;
     flex-direction: column; 
     justify-content: center; 
+    align-items: center;
     
   }
   
@@ -79,6 +82,8 @@
     margin: 5px 15px; 
     
   }
+
+
   .menu-list li{
     display: none;
   }
@@ -156,6 +161,7 @@
     .logo{
       width: 30vw;
       background-color: #05337e00;
+      order: 0;
     }
     .navbar li {
       display: flex;
@@ -243,6 +249,24 @@
       left: 0;
       bottom: -6px;
       transition: 0.5s;
+    }
+    
+    .navbar ul li:last-child a::after{
+      content: '';
+      width: 0;
+      height: 3px;
+      background: #3b82f500;
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      transition: 0.5s;
+    }
+
+    .bandera{
+      width: 40px;
+      height: auto;
+      margin-top: 7px;
+    
     }
 
     .navbar ul li a:hover:after {
@@ -876,6 +900,13 @@ body::-webkit-scrollbar-thumb {
     animation: fadeIn 0.5s ease-in-out forwards; 
 }
  
+.bandera{
+  width: 45px;
+  height: auto;
+  margin-top: 7px;
+
+}
+
 @keyframes fadeIn { 
   0% { 
     opacity: 0; 
